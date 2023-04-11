@@ -1,0 +1,200 @@
+# Format
+### "Parent"
+- Component
+- **"Object"**
+    - Component
+    - **"Object"** (child)
+    
+# Players
+Player objects, either client-side or server-side.
+## Player Object (Client Multiplayer)
+### “Player_Server(Clone)”
+-	SteamChannel
+-	Player
+-	PlayerClothing
+-	PlayerInventory
+-	PlayerLife
+-	PlayerSkills
+-	PlayerCrafting
+-	PlayerStance
+-	PlayerMovement
+-	PlayerLook
+-	PlayerInteract
+-	PlayerAnimator
+-	PlayerEquipment
+-	PlayerInput
+-	PlayerVoice
+-	PlayerWorkzone
+-	PlayerQuests
+-	CharacterController
+-	AudioSource
+-	**“Third”**
+    - Animation
+    - HumanAnimator
+    - HumanClothes
+    - LODGroup
+    - GrassDisplacement
+    - **“Model_0”**
+        - SkinnedMeshRenderer
+    - **“Skeleton”**
+        - **“Left_Hip”**
+            - **“Left_Leg”**
+                - BoxCollider
+                - **“Left_Foot”**
+        - **“Right_Hip”**
+            - **“Right_Leg”**
+                - BoxCollider
+                - **“Right_Foot”**
+                - **“Secondary_Melee”**
+                - **“Secondary_Gun”**
+        - **“Spine”**
+            - BoxCollider
+            - **“Left_Shoulder”**
+                - **“Left_Arm”**
+                    - BoxCollider
+                    - **“Left_Hand”**
+                        - **“Left_Hook”**
+            - **“Right_Shoulder”**
+                - **“Right_Arm”**
+                    - BoxCollider
+                    - **“Right_Hand”**
+                        - **“Right_Hook”**
+            - **“Skull”**
+                - BoxCollider
+                - **“Spot”**
+                    - Light
+                    - LightLOD
+            - **“Primary_Large_Gun”**
+            - **“Primary_Melee”**
+            - **“Primary_Small_Gun”**
+    - **“Model_1”**
+        - SkinnedMeshRenderer
+- **“Aim”**
+    - **“Fire”**
+- **“First”**
+    - **“Camera”**
+        - Camera
+        - FlareLayer
+        - AudioListener
+        - PlayerUI
+        - SunShaftsCs
+        - HighlightingRenderer
+        - BlurEffect
+        - AudioReverbZone
+        - AudioSource
+        - GrayscaleEffect
+        - MainCamera
+        - DecalRenderer
+        - PostProcessLayer
+        - **“Scope”**
+            - Camera
+            - DecalRenderer
+            - PostProcessLayer
+        - **“Spot”**
+            - Light
+        - **“Viewmodel”**
+            - Animation
+            - CharacterAnimator
+            - HumanClothes
+            - **“Skeleton”**
+                - **“Left_Hip”**
+                    - **“Left_Leg”**
+                        - **“Left_Foot”**
+                - **“Right_Hip”**
+                    - **“Right_Leg”**
+                        - **“Right_Foot”**
+                - **“Spine”**
+                    - **“Left_Shoulder”**
+                        - **“Left_Arm”**
+                            - **“Left_Hand”**
+                                - **“Left_Hook”**
+                    - **“Right_Shoulder”**
+                        - **“Right_Arm”**
+                            - **“Right_Hand”**
+                                - **“Right_Hook”**
+                    - **“Skull”**
+                        - **“ViewmodelCamera”**
+                            - Camera
+                            - GrayscaleEffect
+                            - PostProcessLayer
+            - **“Model_0”**
+                - SkinnedMeshRenderer
+
+## Player Object (Server Multiplayer)
+### “Player_Dedicated(Clone)”
+-	SteamChannel
+-	Player
+-	PlayerClothing
+-	PlayerInventory
+-	PlayerLife
+-	PlayerSkills
+-	PlayerCrafting
+-	PlayerMovement
+-	PlayerLook
+-	PlayerAnimator
+-	PlayerEquipment
+-	PlayerInput
+-	PlayerVoice
+-	PlayerQuests
+-	CharacterController
+-	**“Third”**
+    -	Animation
+    -	HumanAnimator
+    -	HumanClothes
+    -	**“Skeleton”**
+        -	**“Left_Hip”**
+            -	**“Left_Leg”**
+                -	BoxCollider
+                -	**“Left_Foot”**
+        -	**“Right_Hip”**
+            -	**“Right_Leg”**
+                -	BoxCollider
+                -	**“Right_Foot”**
+                -	**“Secondary_Melee”**
+                -	**“Secondary_Gun”**
+        -	**“Spine”**
+            -	BoxCollider
+            -	**“Left_Shoulder”**
+                -	**“Left_Arm”**
+                -	BoxCollider
+                    -	**“Left_Hand”**
+                        -	**“Left_Hook”**
+            -	**“Right_Shoulder”**
+                -	**“Right_Arm”**
+                    -	BoxCollider
+                    -	**“Right_Hand”**
+                        -	**“Right_Hook”**
+            -	**“Skull”**
+                -	BoxCollider
+            -	**“Primary_Large_Gun”**
+            -	**“Primary_Melee”**
+            -	**“Primary_Small_Gun”**
+-	**”Aim”**
+    -	**“Fire”**
+
+# Editor
+## Editor Object (Client)
+### “Editor”
+-	Editor
+-	EditorInteract
+-	EditorMovement
+-	EditorLook
+-	EditorObjects
+-	EditorSpawns
+-	EditorRoads
+-	EditorNavigation
+-	EditorArea
+-	EditorTerrain
+-	**“Camera”**
+    -	Camera
+    -	FlareLayer
+    -	AudioListener
+    -	EditorUI
+    -	SunShaftsCs
+    -	HighlightingRenderer
+    -	MainCamera
+    -	DecalRenderer
+    -	GLRenderer
+    -	PostProcessLayer
+    -	**“HighlightCamera”**
+        -	Camera
