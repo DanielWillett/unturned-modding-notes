@@ -198,3 +198,5 @@ Player objects, either client-side or server-side.
     -	PostProcessLayer
     -	**“HighlightCamera”**
         -	Camera
+
+*As of Unturned v3.23.5.0 (April 10th, 2023)*
