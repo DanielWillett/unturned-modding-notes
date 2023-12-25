@@ -7,8 +7,8 @@
     
 # Players
 Player objects, either client-side or server-side.
-## Player Object (Client Multiplayer)
-### “Player_Server(Clone)”
+## Player Object (Client local player)
+### “Player_Server”
 -	SteamChannel
 -	Player
 -	PlayerClothing
@@ -120,8 +120,8 @@ Player objects, either client-side or server-side.
             - **“Model_0”**
                 - SkinnedMeshRenderer
 
-## Player Object (Server Multiplayer)
-### “Player_Dedicated(Clone)”
+## Player Object (Client remote players)
+### “Player_Client”
 -	SteamChannel
 -	Player
 -	PlayerClothing
@@ -129,8 +129,72 @@ Player objects, either client-side or server-side.
 -	PlayerLife
 -	PlayerSkills
 -	PlayerCrafting
+-	PlayerStance
 -	PlayerMovement
 -	PlayerLook
+-	PlayerInteract
+-	PlayerAnimator
+-	PlayerEquipment
+-	PlayerInput
+-	PlayerVoice
+-	PlayerQuests
+-	AudioSource
+-	**“Third”**
+    - Animation
+    - HumanAnimator
+    - HumanClothes
+    - LODGroup
+    - **“Model_0”**
+        - SkinnedMeshRenderer
+    - **“Skeleton”**
+        - **“Left_Hip”**
+            - **“Left_Leg”**
+                - BoxCollider
+                - **“Left_Foot”**
+        - **“Right_Hip”**
+            - **“Right_Leg”**
+                - BoxCollider
+                - **“Right_Foot”**
+                - **“Secondary_Melee”**
+                - **“Secondary_Gun”**
+        - **“Spine”**
+            - BoxCollider
+            - **“Left_Shoulder”**
+                - **“Left_Arm”**
+                    - BoxCollider
+                    - **“Left_Hand”**
+                        - **“Left_Hook”**
+            - **“Right_Shoulder”**
+                - **“Right_Arm”**
+                    - BoxCollider
+                    - **“Right_Hand”**
+                        - **“Right_Hook”**
+            - **“Skull”**
+                - BoxCollider
+                - **“Spot”**
+                    - Light
+                    - LightLOD
+            - **“Primary_Large_Gun”**
+            - **“Primary_Melee”**
+            - **“Primary_Small_Gun”**
+    - **“Model_1”**
+        - SkinnedMeshRenderer
+- **“Aim”**
+    - **“Fire”**
+
+## Player Object (Dedicated server remote players)
+### “Player_Dedicated”
+-	SteamChannel
+-	Player
+-	PlayerClothing
+-	PlayerInventory
+-	PlayerLife
+-	PlayerSkills
+-	PlayerCrafting
+-	PlayerStance
+-	PlayerMovement
+-	PlayerLook
+-	PlayerInteract
 -	PlayerAnimator
 -	PlayerEquipment
 -	PlayerInput
@@ -156,7 +220,7 @@ Player objects, either client-side or server-side.
             -	BoxCollider
             -	**“Left_Shoulder”**
                 -	**“Left_Arm”**
-                -	BoxCollider
+                    -	BoxCollider
                     -	**“Left_Hand”**
                         -	**“Left_Hook”**
             -	**“Right_Shoulder”**
@@ -173,7 +237,7 @@ Player objects, either client-side or server-side.
     -	**“Fire”**
 
 # Editor
-## Editor Object (Client)
+## Editor Object (Client) (Gets parented to `Level.editing`, as a sibling of the mapper below)
 ### “Editor”
 -	Editor
 -	EditorInteract
@@ -199,4 +263,8 @@ Player objects, either client-side or server-side.
     -	**“HighlightCamera”**
         -	Camera
 
-*As of Unturned v3.23.5.0 (April 10th, 2023)*
+## Editor Mapper (Gets parented to `Level.editing`, as a sibling of the editor object above)
+### “Mapper”
+-	Camera
+
+*As of Unturned v3.23.14.0 (December 21st, 2023)*
