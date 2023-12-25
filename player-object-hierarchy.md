@@ -129,8 +129,10 @@ Player objects, either client-side or server-side.
 -	PlayerLife
 -	PlayerSkills
 -	PlayerCrafting
+-	PlayerStance
 -	PlayerMovement
 -	PlayerLook
+-	PlayerInteract
 -	PlayerAnimator
 -	PlayerEquipment
 -	PlayerInput
@@ -156,7 +158,7 @@ Player objects, either client-side or server-side.
             -	BoxCollider
             -	**“Left_Shoulder”**
                 -	**“Left_Arm”**
-                -	BoxCollider
+                    -	BoxCollider
                     -	**“Left_Hand”**
                         -	**“Left_Hook”**
             -	**“Right_Shoulder”**
@@ -173,7 +175,7 @@ Player objects, either client-side or server-side.
     -	**“Fire”**
 
 # Editor
-## Editor Object (Client)
+## Editor Object (Client) (Gets parented to `Level.editing`, as a sibling of the mapper below)
 ### “Editor”
 -	Editor
 -	EditorInteract
@@ -199,4 +201,8 @@ Player objects, either client-side or server-side.
     -	**“HighlightCamera”**
         -	Camera
 
-*As of Unturned v3.23.5.0 (April 10th, 2023)*
+# Editor Mapper (Gets parented to `Level.editing`, as a sibling of the editor object above)
+### “Mapper”
+-	Camera
+
+*As of Unturned v3.23.14.0 (December 21st, 2023)*
